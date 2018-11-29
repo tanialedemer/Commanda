@@ -4,10 +4,19 @@
              x:Class="Commanda.Pages.MesaPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Login"
+            <Label Text="Mesas"
                    Font="30"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
+
+    <StackLayout
+        Orientation="Horizontal">
+        <ListView x:Name="lstMesas"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="Center">
+        </ListView>
+    </StackLayout>
+
 </ContentPage>

@@ -43,7 +43,7 @@ namespace Commanda.Pages
             enterButton.IsEnabled = false;
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("http://181.123.10.51");
-            string url = string.Format("/command/UserAPI.php?user={0}&pass={1}", userEntry.Text, passwordEntry.Text);
+            string url = string.Format("/app/command/UserAPI.php?user={0}&pass={1}", userEntry.Text, passwordEntry.Text);
             var response = await client.GetAsync(url);
             var result = response.Content.ReadAsStringAsync().Result;
             enterButton.IsEnabled = true;
