@@ -44,6 +44,15 @@ namespace Commanda.Pages
                 mesas = JsonConvert.DeserializeObject<List<Mesa>>(result);
                 lstMesas.ItemsSource = mesas;
             }
+
+                 async void ItemTapped (object sender, ItemTappedEventArgs e)
+                {
+                    var mesa = e.Item as Mesa;
+
+
+                     await Navigation.PushAsync(new PedidoPage() { Title = "Mesa Nro."+mesa.num_mesa });
+                }
+
         }
 
     }

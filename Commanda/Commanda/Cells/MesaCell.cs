@@ -13,7 +13,7 @@ namespace Commanda.Cells
             var mesaLabel = new Label
             {
                 HorizontalTextAlignment = TextAlignment.Start,
-                FontSize = 20
+                FontSize = 20 
 
             };
 

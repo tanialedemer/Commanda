@@ -15,7 +15,19 @@
         Orientation="Horizontal">
         <ListView x:Name="lstMesas"
                   HorizontalOptions="FillAndExpand"
-                  VerticalOptions="Center">
+                  VerticalOptions="Center"
+                  ItemTapped="ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Grid BackgroundColor="Purple" Padding="10">
+                            <Label Text="{Binding num_mesa}" TextColor="White"></Label>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
 
