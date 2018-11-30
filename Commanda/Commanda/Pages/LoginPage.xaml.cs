@@ -18,7 +18,8 @@ namespace Commanda.Pages
 			InitializeComponent ();
 
             enterButton.Clicked += enterButton_Clicked;
-
+            userEntry.Text = "a";
+            passwordEntry.Text = "a";
             
 
         }

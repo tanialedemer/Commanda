@@ -6,7 +6,7 @@
         <StackLayout
             Padding="10,30,10,10"
             Spacing="10">
-            <Label Text="Pedido"
+            <Label Text="Menu"
                    Font="30"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
