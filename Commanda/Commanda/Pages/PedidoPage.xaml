@@ -12,4 +12,23 @@
                    VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
+
+    <StackLayout
+        Orientation="Horizontal">
+        <ListView x:Name="lstCategorias"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Grid BackgroundColor="Purple" Padding="10">
+                                <Label Text="{Binding categoria}" TextColor="White"></Label>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
