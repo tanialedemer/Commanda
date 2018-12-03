@@ -6,6 +6,7 @@ namespace Commanda.Models
 {
     class Category
     {
-       
+        public int id_categoria { get; set; }
+        public string categoria { get; set; }
     }
 }

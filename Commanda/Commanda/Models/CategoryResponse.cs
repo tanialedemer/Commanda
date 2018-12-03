@@ -4,11 +4,12 @@ using System.Text;
 
 namespace Commanda.Models
 {
-    class Product
+    class CategoryResponse
     {
-        public int id_producto { get; set; }
-        public string descripcion { get; set; }
-        public float precio { get; set; }
         public int id_categoria { get; set; }
+
+        public string categoria { get; set; }
+
+        public List<Product> Products { get; set; }
     }
 }
