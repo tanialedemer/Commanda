@@ -36,7 +36,7 @@ namespace Commanda.Pages
             {
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri("http://181.123.10.51");
-                string url = string.Format("/app/command/ProductAPI.php");
+                string url = string.Format("/app/command/CategoryAPI.php");
                 var response = await client.GetAsync(url);
                 result = response.Content.ReadAsStringAsync().Result;
             }
