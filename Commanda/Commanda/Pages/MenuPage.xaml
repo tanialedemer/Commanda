@@ -4,15 +4,13 @@
              x:Class="Commanda.Pages.MenuPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Lista de Productos"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Lista de Productos"/>
             <StackLayout
         Orientation="Horizontal">
                 <ListView x:Name="lstMenu"
                   HorizontalOptions="FillAndExpand"
                   VerticalOptions="Center"
-                  ItemTapped="ItemTapped">
+                  >
                 </ListView>
             </StackLayout>
         </StackLayout>
