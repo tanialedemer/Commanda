@@ -16,12 +16,14 @@ namespace Commanda.Pages
 	public partial class MenuPage : ContentPage
 	{
         private List<Product> producto;
-        public MenuPage ()
-		{
+
+        public MenuPage()
+        {
 			InitializeComponent ();
+            lstMenu.ItemTemplate = new DataTemplate(typeof(Cells.MenuCell));
             this.LoadMenu();
         }
-       
+
         private async void LoadMenu()
         {
             string result;
