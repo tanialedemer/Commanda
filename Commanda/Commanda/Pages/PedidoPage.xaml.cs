@@ -14,7 +14,7 @@ namespace Commanda.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PedidoPage : ContentPage
 	{
-        private List<CategoryResponse> categorias;
+        private List<Category> categorias;
         private int id_mesa;
 
         public PedidoPage ()
@@ -34,6 +34,7 @@ namespace Commanda.Pages
             string result;
             try
             {
+                
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri("http://181.123.10.51");
                 string url = string.Format("/app/command/CategoryAPI.php");
@@ -46,14 +47,14 @@ namespace Commanda.Pages
                 return;
             }
 
-            categorias = JsonConvert.DeserializeObject<List<CategoryResponse>>(result);
+            categorias = JsonConvert.DeserializeObject<List<Category>>(result);
             lstCategorias.ItemsSource = categorias;
         }
             async void ItemTapped(object sender, ItemTappedEventArgs e)
         {
            
                 var categoria = e.Item as Category;
-                await Navigation.PushAsync(new MenuPage() { Title = "ID." + categoria.id_categoria + categoria.categoria });
+                await Navigation.PushAsync(new MenuPage() { Title = "" + categoria.categoria });
             
         }
 

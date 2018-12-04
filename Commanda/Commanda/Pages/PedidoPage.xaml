@@ -10,26 +10,25 @@
                    Font="30"
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
-        </StackLayout>
-    </ContentPage.Content>
-
-    <StackLayout
+            <StackLayout
         Orientation="Horizontal">
-        <ListView x:Name="lstCategorias"
+                <ListView x:Name="lstCategorias"
                   HorizontalOptions="FillAndExpand"
                   VerticalOptions="Center"
                   ItemTapped="ItemTapped">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Vertical">
-                            <Grid BackgroundColor="Purple" Padding="10">
-                                <Label Text="{Binding categoria}" TextColor="White"></Label>
-                            </Grid>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <Grid BackgroundColor="Purple" Padding="10">
+                                        <Label Text="{Binding categoria}" TextColor="White"></Label>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
