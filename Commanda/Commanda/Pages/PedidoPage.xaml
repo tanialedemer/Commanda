@@ -17,7 +17,8 @@
         Orientation="Horizontal">
         <ListView x:Name="lstCategorias"
                   HorizontalOptions="FillAndExpand"
-                  VerticalOptions="Center">
+                  VerticalOptions="Center"
+                  ItemTapped="ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

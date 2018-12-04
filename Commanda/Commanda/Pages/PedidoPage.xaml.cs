@@ -49,7 +49,13 @@ namespace Commanda.Pages
             categorias = JsonConvert.DeserializeObject<List<CategoryResponse>>(result);
             lstCategorias.ItemsSource = categorias;
         }
-
+            async void ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+           
+                var categoria = e.Item as Category;
+                await Navigation.PushAsync(new MenuPage() { Title = "ID." + categoria.id_categoria + categoria.categoria });
+            
+        }
 
     }
 }
